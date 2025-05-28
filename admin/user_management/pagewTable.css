@@ -1,0 +1,231 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  background-color: rgb(250, 247, 247);
+}
+
+table {
+  width: 90%;
+  margin: 40px auto;
+  border-collapse: collapse;
+  border-radius: 9px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th {
+  background-color: #6b7dfc;
+  color: white;
+  padding: 16px;
+  text-align: left;
+}
+
+td {
+  background-color: #ffffff;
+  padding: 14px 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+a button {
+  padding: 6px 12px;
+  margin-right: 6px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-hapus {
+  background-color: #f87171;
+  color: white;
+  &:hover{
+    color: #f87171;
+    background-color: white;
+  }
+}
+
+.disabled {
+  color: gray;
+}
+
+.notif-sukses {
+  background-color: #e6ffed;
+  color: #256029;
+  border: 1px solid #b2f2bb;
+  padding: 12px 20px;
+  margin-bottom: 20px;
+  margin-left: 80px;
+  width: fit-content;
+  border-radius: 8px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  z-index: 9999;
+  position: fixed;
+  margin-left: 2rem;
+}
+.notif-sukses.hide {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+  
+  button,
+  select,
+  input {
+    cursor: pointer;
+    padding: 8px;
+    margin: 5px;
+  }
+
+  .navbar{
+    background-color: white;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    margin-left: 4rem;
+    width: 100%;
+  }
+
+  .navbar input {
+    padding: 11px 15px;
+    border: 1px solid #e9e8e8;
+    border-radius: 4px;
+    width: 45%;
+    font-size: 0.9rem;
+  }
+
+  .add{
+    border-radius: 4px;
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    font-weight: bold;
+    gap: 6x;
+    padding: 8px 12px;
+    background-color: #25e40c;
+    margin-left: 4rem;
+    color: white;
+    border: 2px solid rgb(214, 214, 214);
+    &:hover{
+      background-color: white;
+      color: #25e40c;
+    }
+  }
+  
+  .navbar button {
+    padding: 9px 12px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  .cari{
+    color: #00bfff; 
+    background-color: white;
+    &:hover{
+      background-color: #00bfff;
+      color: white;
+    }
+  }
+
+  .reset{
+    color: #ff9500;
+    background-color: white;
+    &:hover{
+      background-color: #ff9500;
+      color: white;
+    }
+  }
+  
+  .sidebar{
+      position: fixed;
+      width: 4rem;
+      background-color: white;
+      top: 0;
+      left: 0;
+      height: 100%;
+  }
+
+  .main-content{
+    margin-left: 5rem;
+    margin-right: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  :root {
+    interpolate-size: allow-keywords;
+  }
+  
+  nav a {
+    white-space: nowrap;
+    width: 2.5rem;
+    overflow-x: clip;
+    transition: width 0.35s ease;
+    
+    &:hover,
+    &:focus-visible {
+      width: max-content;
+    }
+  }
+  
+  @layer layout {
+    * {
+      box-sizing: border-box;
+    }
+  
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+  
+      border: none;
+      padding: 0.5rem 0;
+      overflow-x: visible;
+  
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+  
+      width: 4.5rem;
+      padding: 1rem;
+    }
+
+    nav header{
+      display: grid;
+        grid-template-columns: 1.5rem auto;
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+  
+    nav ul {
+      a {
+        display: grid;
+        grid-template-columns: 1.5rem auto;
+        gap: 1rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+        transition-duration: 0.25s;
+        align-items: center;
+        background: white;
+        border-radius: 0.5rem;
+        color: black;
+        text-decoration: none;
+  
+        &:hover,
+        &:focus-visible {
+          background: rgb(226, 226, 226);
+          color: black;
+        }
+      }
+    }
+  
+    .text {
+      padding-right: 0.75rem;
+      font-family: "Open Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 500;
+    }
+  }
